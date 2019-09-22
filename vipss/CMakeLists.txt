@@ -6,6 +6,8 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
 endif()
 
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
 find_package(NLopt REQUIRED)
 set(NLOPT_LIB_DIR "")
 set(NLOPT_LIB ${NLOPT_LIBRARIES})
@@ -13,7 +15,6 @@ set(NLOPT_LIB ${NLOPT_LIBRARIES})
 find_package(Armadillo REQUIRED)
 set(ARMADILLO_LIB_DIRS "")
 set(ARMADILLO_LIB ${ARMADILLO_LIBRARIES})
-
 
 include_directories(${NLOPT_INCLUDE_DIRS} ${ARMADILLO_INCLUDE_DIRS} ./src/surfacer)
 aux_source_directory(. MAIN)
