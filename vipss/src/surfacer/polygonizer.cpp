@@ -557,7 +557,7 @@ bool polygonize (
     //Write();
     freeprocess(&p);
 
-    return NULL;
+    return false;
 }
 
 /* freeprocess: free all allocated memory */
@@ -703,10 +703,10 @@ int dotet (CUBE *cube, int c1, int c2, int c3, int c4, PROCESS *p) {
     CORNERLIST *c = cube->corners[c3];
     CORNERLIST *d = cube->corners[c4];
     int index = 0, apos, bpos, cpos, dpos, e1, e2, e3, e4, e5, e6;
-    if (apos = (a->value > 0.0)) index += 8;
-    if (bpos = (b->value > 0.0)) index += 4;
-    if (cpos = (c->value > 0.0)) index += 2;
-    if (dpos = (d->value > 0.0)) index += 1;
+    if ((apos = (a->value > 0.0))) index += 8;
+    if ((bpos = (b->value > 0.0))) index += 4;
+    if ((cpos = (c->value > 0.0))) index += 2;
+    if ((dpos = (d->value > 0.0))) index += 1;
     /* index now 4-bit number equal to one of the 16 possible cases */
     if (apos != bpos) e1 = vertid(a, b, p);
     if (apos != cpos) e2 = vertid(a, c, p);

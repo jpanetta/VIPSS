@@ -1,4 +1,5 @@
 #include "ImplicitedSurfacing.h"
+#include<chrono>
 
 
 typedef std::chrono::high_resolution_clock Clock;
@@ -80,7 +81,7 @@ void Surfacer::CalSurfacingPara(vector<double>&Vs, int nvoxels){
 
 
 
-int GetOffSurfacePoint(vector<double>&offPts, vector<double>&surPts, vector<uint>&surfv, vector<double>&testPts, double offthres){
+void GetOffSurfacePoint(vector<double>&offPts, vector<double>&surPts, vector<uint>&surfv, vector<double>&testPts, double offthres){
 
 
 

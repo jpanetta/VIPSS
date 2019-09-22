@@ -106,8 +106,7 @@ int RBF_Core::InjectData(vector<double> &pts, RBF_Paras para){
     vector<double> normals,tangents;
     vector<uint> edges;
 
-    InjectData(pts,labels,normals,tangents,edges,para);
-
+    return InjectData(pts,labels,normals,tangents,edges,para);
 }
 
 int RBF_Core::InjectData(vector<double> &pts, vector<int> &labels, vector<double> &normals, vector<double> &tangents, vector<uint> &edges, RBF_Paras para){
